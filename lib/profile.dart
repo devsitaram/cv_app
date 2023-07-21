@@ -9,6 +9,9 @@ class Profile extends StatelessWidget {
       body: SafeArea(
           child: Container(
         alignment: Alignment.center,
+        child: const Column(children: [
+            Text("data") // txt
+        ]),
       )),
     );
   }
