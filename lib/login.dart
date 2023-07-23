@@ -49,14 +49,14 @@ class Login extends StatelessWidget {
               height: 90,
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: TextButton(
+                child: FilledButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const Profile()),
                     );
                   },
-                  style: OutlinedButton.styleFrom(
+                  style: FilledButton.styleFrom(
                     backgroundColor: Colors.lightBlue, //<-- SEE HERE
                   ),
                   child: const Text(
