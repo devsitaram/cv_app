@@ -4,10 +4,21 @@ import 'package:flutter/material.dart';
 class Login extends StatelessWidget {
   const Login({super.key});
 
+  // emil validation function
+  bool emailValidation(String email) {
+  // Regular expression
+  const emailRegex = r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$';
+  // Check if the email matches the regex pattern.
+  if (RegExp(emailRegex).hasMatch(email)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    var height = size.height;
     var width = size.width;
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 154, 238, 197),
@@ -51,10 +62,13 @@ class Login extends StatelessWidget {
                 padding: const EdgeInsets.all(20.0),
                 child: FilledButton(
                   onPressed: () {
+                    // var isValid = emailValidation(email)
+                    // if(isValid){
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const Profile()),
                     );
+                    // } 
                   },
                   style: FilledButton.styleFrom(
                     backgroundColor: Colors.lightBlue, //<-- SEE HERE

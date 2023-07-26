@@ -28,28 +28,13 @@ class Profile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // profile image
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20),
-                      child: SizedBox(
-                        height: 110,
-                        width: 110,
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(70),
-                          ),
-                          color: Colors.lightBlue,
-                          elevation: 5,
-                          // child: ClipRRect(
-                          //   borderRadius: BorderRadius.circular(70),
-                          //   child: Image.network(
-                          //     'https://example.com/your-image-url.png', // image
-                          //     fit: BoxFit.cover,
-                          //   ),
-                          // ),
-                        ),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage("lib/images/img_2.png"),
+                        radius: 100,
                       ),
                     ),
-
                     // Contact me text
                     const Padding(
                       padding: EdgeInsets.only(top: 15),
@@ -534,7 +519,8 @@ class Profile extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 10,
                                           fontWeight: FontWeight.normal,
-                                          color:Color.fromARGB(255, 20, 20, 20),
+                                          color:
+                                              Color.fromARGB(255, 20, 20, 20),
                                         ),
                                       )
                                     ],
@@ -570,7 +556,8 @@ class Profile extends StatelessWidget {
                                                 child: Text(
                                                   "Islington College | BSc IT",
                                                   style: TextStyle(
-                                                    color: Color.fromARGB(255, 0, 0, 0),
+                                                    color: Color.fromARGB(
+                                                        255, 0, 0, 0),
                                                   ),
                                                 ),
                                               ),
@@ -656,7 +643,8 @@ class Profile extends StatelessWidget {
                                                 child: Text(
                                                   "Android Developer | CSR",
                                                   style: TextStyle(
-                                                    color: Color.fromARGB(255, 0, 0, 0),
+                                                    color: Color.fromARGB(
+                                                        255, 0, 0, 0),
                                                   ),
                                                 ),
                                               ),
@@ -741,7 +729,8 @@ class Profile extends StatelessWidget {
                                                 child: Text(
                                                   "Book App | E-Wallet",
                                                   style: TextStyle(
-                                                    color: Color.fromARGB(255, 0, 0, 0),
+                                                    color: Color.fromARGB(
+                                                        255, 0, 0, 0),
                                                   ),
                                                 ),
                                               ),
@@ -786,8 +775,26 @@ class Profile extends StatelessWidget {
             ),
           ],
         ),
-        // ),
       ),
     );
   }
 }
+
+                        // child: Card(
+                        //   shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(70),
+                        //   ),
+                        //   color: Colors.lightBlue,
+                        //   elevation: 5,
+                        //   child: ClipRRect(
+                        //       borderRadius: BorderRadius.circular(70),
+                        //   ),
+                        //   child: Image.asset("lib/images/img_2.png"),
+                        //   // child: ClipRRect(
+                        //   //   borderRadius: BorderRadius.circular(70),
+                        //   //   child: Image.network(
+                        //   //     'https://example.com/your-image-url.png', // image
+                        //   //     fit: BoxFit.cover,
+                        //   //   ),
+                        //   // ),
+                        // ),
