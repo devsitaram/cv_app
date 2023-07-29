@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'customContenaer.dart';
+
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
 
@@ -431,68 +433,79 @@ class Profile extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             // about row
-                            Padding(
-                              padding: EdgeInsets.only(top: 10),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  // about user
-                                  SizedBox(
-                                    height: 50,
-                                    width: 50,
-                                    child: Card(
-                                      color: Colors.white,
-                                      elevation: 5,
-                                      // image icon
-                                    ),
-                                  ),
-                                  // about text
-                                  Expanded(
-                                    // Add Expanded widget
-                                    child: Padding(
-                                      padding: EdgeInsets.only(left: 10),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                            padding: EdgeInsets.only(top: 15),
-                                            child: Text(
-                                              "About",
-                                              style: TextStyle(
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.bold,
-                                                color: Color.fromARGB(
-                                                    255, 30, 30, 30),
-                                              ),
-                                            ),
-                                          ),
-                                          Column(
-                                            children: [
-                                              Padding(
-                                                padding:
-                                                    EdgeInsets.only(top: 5),
-                                                child: Text(
-                                                  "I am an Android Application Developer by using Java and Kotlin both programming languages. Getting the job you deserve in this economy can be difficult without the right help and training.",
-                                                  style: TextStyle(
-                                                    fontSize: 10,
-                                                    fontWeight:
-                                                        FontWeight.normal,
-                                                    color: Color.fromARGB(
-                                                        255, 20, 20, 20),
-                                                  ),
-                                                  textAlign: TextAlign.justify,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                            CustomContainer(
+                              title: "About",
+                              description:
+                                  "I am an Android Application Developer by using Java and Kotlin both programming languages. Getting the job you deserve in this economy can be difficult without the right help and training.",
                             ),
+                            // CustomContenaer(
+                            //   title: "About",
+                            //   description:
+                            //       "I am an Android Application Developer by using Java and Kotlin both programming languages. Getting the job you deserve in this economy can be difficult without the right help and training.",
+                            // ),
+
+                            // Padding(
+                            //   padding: EdgeInsets.only(top: 10),
+                            //   child: Row(
+                            //     crossAxisAlignment: CrossAxisAlignment.start,
+                            //     children: [
+                            //       // about user
+                            //       SizedBox(
+                            //         height: 50,
+                            //         width: 50,
+                            //         child: Card(
+                            //           color: Colors.white,
+                            //           elevation: 5,
+                            //           // image icon
+                            //         ),
+                            //       ),
+                            //       // about text
+                            //       Expanded(
+                            //         // Add Expanded widget
+                            //         child: Padding(
+                            //           padding: EdgeInsets.only(left: 10),
+                            //           child: Column(
+                            //             crossAxisAlignment:
+                            //                 CrossAxisAlignment.start,
+                            //             children: [
+                            //               Padding(
+                            //                 padding: EdgeInsets.only(top: 15),
+                            //                 child: Text(
+                            //                   "About",
+                            //                   style: TextStyle(
+                            //                     fontSize: 15,
+                            //                     fontWeight: FontWeight.bold,
+                            //                     color: Color.fromARGB(
+                            //                         255, 30, 30, 30),
+                            //                   ),
+                            //                 ),
+                            //               ),
+                            //               Column(
+                            //                 children: [
+                            //                   Padding(
+                            //                     padding:
+                            //                         EdgeInsets.only(top: 5),
+                            //                     child: Text(
+                            //                       "I am an Android Application Developer by using Java and Kotlin both programming languages. Getting the job you deserve in this economy can be difficult without the right help and training.",
+                            //                       style: TextStyle(
+                            //                         fontSize: 10,
+                            //                         fontWeight:
+                            //                             FontWeight.normal,
+                            //                         color: Color.fromARGB(
+                            //                             255, 20, 20, 20),
+                            //                       ),
+                            //                       textAlign: TextAlign.justify,
+                            //                     ),
+                            //                   ),
+                            //                 ],
+                            //               ),
+                            //             ],
+                            //           ),
+                            //         ),
+                            //       ),
+                            //     ],
+                            //   ),
+                            // ),
 
                             // Education
                             Padding(
