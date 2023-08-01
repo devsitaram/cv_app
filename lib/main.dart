@@ -1,8 +1,8 @@
-import 'package:cv/splashScreen.dart';
+// import 'package:cv/splashScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'firstPage.dart';
-import 'login.dart';
+// import 'login.dart';
 
 void main() {
   runApp(const MyApp());

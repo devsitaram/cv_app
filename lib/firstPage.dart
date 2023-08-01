@@ -11,30 +11,31 @@ class FirstPage extends StatelessWidget {
     final myController = TextEditingController();
     return Scaffold(
       body: SafeArea(
-          child: Form(
-        key: formKey,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: TextFormField(
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'The field is empty!';
-                  }
-                  return null;
-                },
-                controller: myController,
-                decoration: const InputDecoration(
+        child: Form(
+          key: formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: TextFormField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'The field is empty!';
+                    }
+                    return null;
+                  },
+                  controller: myController,
+                  decoration: const InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 0.5, color: Colors.black))),
+                      borderSide: BorderSide(width: 0.5, color: Colors.black),
+                    ),
+                  ),
+                ),
               ),
-            ),
 
-            // press button
-            TextButton(
+              // press button
+              TextButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     // print(myController.text);
@@ -45,23 +46,28 @@ class FirstPage extends StatelessWidget {
                 child: const Text(
                   "Press",
                   style: TextStyle(fontSize: 20),
-                )),
+                ),
+              ),
 
-            // check button
-            TextButton(
+              // check button
+              TextButton(
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SecondPage())
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SecondPage(),
+                    ),
                   );
                 },
                 child: const Text(
                   "Check",
                   style: TextStyle(fontSize: 20),
-                ))
-          ],
+                ),
+              ),
+            ],
+          ),
         ),
-      )),
+      ),
     );
   }
 }

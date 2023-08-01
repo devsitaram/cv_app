@@ -1,4 +1,4 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -22,9 +22,15 @@ class _SecondPageState extends State<SecondPage> {
   featchValue() async {
     String? tempValue = await const FlutterSecureStorage().read(key: "value");
     setState(() {
-      value = tempValue.toString();
+    print(value);
+    value = tempValue.toString();
+    print(value);
     });
   }
+
+  
+
+  // print(value);
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +39,7 @@ class _SecondPageState extends State<SecondPage> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(value!)
-          ],
+        children: [Text(value!)],
       )),
     );
   }
