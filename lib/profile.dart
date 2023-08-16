@@ -22,8 +22,7 @@ class Profile extends StatelessWidget {
               Container(
                 // height: height * 1,
                 width: width * .35,
-                color: const Color.fromARGB(
-                    255, 65, 60, 60), // Background color of the container (black)
+                color: const Color.fromARGB(255, 65, 60, 60), // Background color of the container (black)
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15),
                   child: Column(

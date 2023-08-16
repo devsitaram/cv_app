@@ -28,8 +28,6 @@ class _SecondPageState extends State<SecondPage> {
     });
   }
 
-  
-
   // print(value);
 
   @override

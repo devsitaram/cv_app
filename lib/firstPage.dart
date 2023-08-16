@@ -9,6 +9,7 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
     final myController = TextEditingController();
+
     return Scaffold(
       body: SafeArea(
         child: Form(
@@ -38,10 +39,11 @@ class FirstPage extends StatelessWidget {
               TextButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
+                    
                     // print(myController.text);
-                    const FlutterSecureStorage()
-                        .write(key: "value", value: myController.text);
+                    const FlutterSecureStorage().write(key: "value", value: myController.text);
                   }
+                  print(myController.text);
                 },
                 child: const Text(
                   "Press",
